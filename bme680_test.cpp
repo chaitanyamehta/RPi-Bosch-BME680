@@ -10,12 +10,12 @@ I2C *i2c;
 
 int8_t read(uint8_t dev_id, uint8_t reg_addr, uint8_t *data, uint16_t len)
 {
-    return (int8_t)i2c->Read(reg_addr, (char *)data, len);
+    return (int8_t)i2c->Read(dev_id, reg_addr, data, len);
 }
 
 int8_t write(uint8_t dev_id, uint8_t reg_addr, uint8_t *data, uint16_t len)
 {
-    return (int8_t)i2c->Write(reg_addr, (char *)data, len);
+    return (int8_t)i2c->Write(dev_id, reg_addr, data, len);
 }
 
 void sleep(uint32_t delay_ms)
@@ -29,9 +29,9 @@ int main()
 
     i2c = new I2C();
     i2c->Open();
-    i2c->SetDeviceAddress(BME680_I2C_ADDR_SECONDARY);
     
     bme680_dev dev;
+    dev.dev_id = BME680_I2C_ADDR_SECONDARY;
     dev.read = read;
     dev.write = write;
     dev.delay_ms = sleep;

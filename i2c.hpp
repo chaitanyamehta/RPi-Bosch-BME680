@@ -8,9 +8,8 @@ class I2C
     
     public:
     int Open();
-    int SetDeviceAddress(char dev_addr);
-    int Read(char reg_addr, char *data, int length);
-    int Write(char reg_addr, char *data, int length);
+    int Read(unsigned char dev_addr, unsigned char reg_addr, unsigned char *data, int length);
+    int Write(unsigned char dev_addr, unsigned char reg_addr, unsigned char *data, int length);
     ~I2C();
 };
 #endif
