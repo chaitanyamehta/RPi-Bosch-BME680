@@ -7,7 +7,7 @@ CFLAGS = $(OPT) $(WARN) $(INC) $(LIB)
 VPATH = ./BME680_driver
 
 # List corresponding compiled object files here (.o files)
-BUILD_OBJ = bme680_test.o i2c.o bme680.o
+BUILD_OBJ = main.o i2c.o bme680.o
  
 #################################
 
