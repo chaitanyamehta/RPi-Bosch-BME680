@@ -4,16 +4,19 @@ Program to read temperature, pressure, humidity and gas resistance from BME680 u
 ## Getting the source code
 1. Clone this repository.
    ```console
-   $ git clone https://github.com/chaitanyamehta/Bosch-BME680.git
+   $ git clone https://github.com/chaitanyamehta/RPi-Bosch-BME680.git
    ```
-2. Get inside Bosch-BME680 directory.
+2. Get inside RPi-Bosch-BME680 directory.
    ```console
-   $ cd Bosch-BME680/
+   $ cd RPi-Bosch-BME680/
    ```
 3. Update submodules.
    ```console
    $ git submodule update --init
    ``` 
+
+## Interfacing with Raspberry Pi
+<img src="/images/connections.png" alt="Schematic" width="500">
 
 ## Running the program
 1. Compile using make.
@@ -26,6 +29,6 @@ Program to read temperature, pressure, humidity and gas resistance from BME680 u
    ```
 
 ## Output
-<img src="/screenshots/bme680_test.PNG" alt="Terminal screenshot" width="500">
+<img src="/images/console_output.png" alt="Console Output" width="500">
 
 [Link](https://github.com/BoschSensortec/BME680_driver) to Bosch's Sensor API.
