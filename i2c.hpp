@@ -10,6 +10,6 @@ class I2C
     int Open();
     int Read(unsigned char dev_addr, unsigned char reg_addr, unsigned char *data, int length);
     int Write(unsigned char dev_addr, unsigned char reg_addr, unsigned char *data, int length);
-    ~I2C();
+    void Close();
 };
 #endif

@@ -75,7 +75,7 @@ int I2C::Write(unsigned char dev_addr, unsigned char reg_addr, unsigned char *da
     return res;
 }
 
-I2C::~I2C()
+void I2C::Close()
 {
     if(i2c_handle != 0)
     {

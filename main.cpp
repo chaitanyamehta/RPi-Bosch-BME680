@@ -106,6 +106,6 @@ int main()
         }
     }
 
-    delete i2c;
+    i2c->Close();
     return 0;
 }
